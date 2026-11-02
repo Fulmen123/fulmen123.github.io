@@ -1,0 +1,61 @@
+:root {
+  --bg: #ffffff;
+  --surface: #f3f7f5;
+  --text: #111318;
+  --muted: #4b5563;
+  --line: #dde5e1;
+  --green: #0e7a49;
+  --link: #0e7a49;
+  --note-bg: #fff7e6;
+  --note-line: #f0c36a;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1412;
+    --surface: #18201c;
+    --text: #e8ecea;
+    --muted: #a7b1ac;
+    --line: #2a3530;
+    --link: #4cc98f;
+    --note-bg: #2a2416;
+    --note-line: #8a6a24;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.wrap { max-width: 42rem; margin: 0 auto; padding: 0 16px; }
+header { border-bottom: 1px solid var(--line); }
+header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 14px; padding-bottom: 14px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+.brand img { width: 32px; height: 32px; border-radius: 8px; }
+nav { display: flex; gap: 16px; font-size: 0.95rem; }
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover, nav a[aria-current="page"] { color: var(--text); text-decoration: underline; }
+main { padding: 32px 0 48px; }
+h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; }
+h2 { font-size: 1.3rem; line-height: 1.3; margin: 36px 0 8px; }
+h3 { font-size: 1.05rem; margin: 22px 0 4px; }
+p, ul { margin: 0 0 14px; }
+ul { padding-left: 1.3em; }
+li { margin-bottom: 6px; }
+a { color: var(--link); }
+.updated { color: var(--muted); margin-bottom: 24px; }
+.hero { text-align: center; padding: 16px 0 8px; }
+.hero img { width: 96px; height: 96px; border-radius: 22px; }
+.hero h1 { font-size: 2.4rem; margin-top: 12px; }
+.tagline { font-size: 1.2rem; color: var(--muted); max-width: 30rem; margin: 0 auto 10px; }
+.soon { display: inline-block; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 4px 14px; font-size: 0.95rem; }
+.note { background: var(--note-bg); border: 1px solid var(--note-line); border-radius: 12px; padding: 14px 16px; margin: 24px 0; }
+.note p:last-child { margin-bottom: 0; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin: 20px 0; }
+.card ul { margin-bottom: 0; }
+footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+footer .wrap { padding-top: 18px; padding-bottom: 28px; }
+footer p { margin: 0 0 6px; }
